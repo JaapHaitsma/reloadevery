@@ -1,0 +1,72 @@
+<!-- $Id: reloadevery.dtd,v 1.2 2009/12/09 06:52:02 jaap Exp $ -->
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   -
+   - The Initial Developer of the Original Code is Jaap Haitsma.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - by the Initial Developer. All Rights Reserved.
+ 
+   - Contributor(s): Jaap Haitsma <jaap@haitsma.org>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!ENTITY reloadevery_menu.label             "Herlaad iedere">
+<!ENTITY reloadevery_menu.accesskey         "H">
+
+<!ENTITY reloadevery_enable.label           "Inschakelen">
+<!ENTITY reloadevery_enable_all_tabs.label  "Inschaken voor alle tabbladen">
+<!ENTITY reloadevery_disable_all_tabs.label "Uitschakelen voor alle tabbladen">
+<!ENTITY reloadevery_randomize.label        "Random">
+
+<!ENTITY reloadevery_5s.label           	"Herlaad iedere 5s">
+<!ENTITY reloadevery_10s.label          	"Herlaad iedere 10s">
+<!ENTITY reloadevery_30s.label          	"Herlaad iedere 30s">
+<!ENTITY reloadevery_1m.label           	"Herlaad iedere 1m">
+<!ENTITY reloadevery_5m.label           	"Herlaad iedere 5m">
+<!ENTITY reloadevery_15m.label          	"Herlaad iedere 15m">
+<!ENTITY reloadevery_custom.label           "Aangepast">
+
+<!ENTITY warn_postdata.title                "Waarschuwing!!!!">
+<!ENTITY warn_postdata.line1                "De pagina waarop je HerlaadIedere wilt inschakelen bevat POSTDATA.">
+<!ENTITY warn_postdata.line2                "Als je HerlaadIedere inschakeld zal elke actie die het formulier uitgevoerd">
+<!ENTITY warn_postdata.line3                "heeft (zoals misschien een online aankoop) herhaald worden!!!">
+<!ENTITY warn_postdata.line4                "">
+<!ENTITY warn_postdata.line5                "Weet je zeker dat je HerlaadIedere wilt inschakelen?">
+
+<!ENTITY reloadevery.yes                    "Ja">
+<!ENTITY reloadevery.no                     "Nee">
+
+<!ENTITY custom_dialog.title                "Herlaadtijd opgeven">
+<!ENTITY custom_dialog.groupbox.label       "Herlaadtijd">
+
+<!ENTITY custom_dialog.minutes.label        "minuten">
+<!ENTITY custom_dialog.seconds.label        "seconden">
+
+
+
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{888d99e7-e8b5-46a3-851e-1ec45da1e644}</em:id>
+    <em:version>17.0.0</em:version>
+    
+    <!-- Target Application this extension can install into, 
+        with minimum and maximum supported versions. --> 
+    <em:targetApplication>
+     <!-- Firefox -->
+     <Description>
+       <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+       <em:minVersion>3.6</em:minVersion>
+       <em:maxVersion>17.*</em:maxVersion>
+     </Description>
+    </em:targetApplication>
+
+    <em:targetApplication>
+     <!-- SeaMonkey -->
+     <Description>
+       <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+       <em:minVersion>2.0</em:minVersion>
+       <em:maxVersion>2.0.*</em:maxVersion>
+     </Description>
+    </em:targetApplication>
+    
+    <!-- Front End MetaData -->
+    <em:name>ReloadEvery</em:name>
+    <em:description>Reloads webpages every so many seconds or minutes</em:description>
+    <em:creator>Jaap Haitsma</em:creator>
+    <em:homepageURL>http://reloadevery.mozdev.org/</em:homepageURL>
+
+    <!-- Front End Integration Hooks (used by Extension Manager)-->
+    <em:iconURL>chrome://reloadevery/skin/reloadevery.png</em:iconURL>
+
+  </Description>      
+</RDF>

@@ -1,0 +1,31 @@
+<!ENTITY reloadevery_menu.label             "Aggiorna ogni">
+<!ENTITY reloadevery_menu.accesskey         "o">
+
+<!ENTITY reloadevery_enable.label           "Attiva">
+<!ENTITY reloadevery_enable_all_tabs.label  "Attiva su tutte le schede">
+<!ENTITY reloadevery_disable_all_tabs.label "Disattiva su tutte le schede">
+<!ENTITY reloadevery_randomize.label        "Random">
+
+<!ENTITY reloadevery_5s.label               "Aggiorna ogni  5 sec.">
+<!ENTITY reloadevery_10s.label              "Aggiorna ogni 10 sec.">
+<!ENTITY reloadevery_30s.label              "Aggiorna ogni 30 sec.">
+<!ENTITY reloadevery_1m.label               "Aggiorna ogni  1 min.">
+<!ENTITY reloadevery_5m.label               "Aggiorna ogni  5 min.">
+<!ENTITY reloadevery_15m.label              "Aggiorna ogni 15 min.">
+<!ENTITY reloadevery_custom.label           "Personalizzato...">
+
+<!ENTITY warn_postdata.title                "Attenzione!">
+<!ENTITY warn_postdata.line1                "La pagina su cui si sta tentando di attivare ReloadEvery contiene campi di tipo POSTDATA.">
+<!ENTITY warn_postdata.line2                "Se si attiva ReloadEvery, ogni azione eseguita all'interno di un campo di testo">
+<!ENTITY warn_postdata.line3                "(come un acquisto online) sarà ripetuta">
+<!ENTITY warn_postdata.line4                "">
+<!ENTITY warn_postdata.line5                "Attivare ReloadEvery?">
+
+<!ENTITY reloadevery.yes                    "Sì">
+<!ENTITY reloadevery.no                     "No">
+
+<!ENTITY custom_dialog.title                "Opzioni di aggiornamento">
+<!ENTITY custom_dialog.groupbox.label       "Intervallo di aggiornamento">
+
+<!ENTITY custom_dialog.minutes.label        "Minuti">
+<!ENTITY custom_dialog.seconds.label        "Secondi">

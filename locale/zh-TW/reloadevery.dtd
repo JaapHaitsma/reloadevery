@@ -1,0 +1,73 @@
+﻿<!-- $Id: reloadevery.dtd,v 1.2 2009/12/09 06:52:03 jaap Exp $ -->
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   -
+   - The Initial Developer of the Original Code is Jaap Haitsma.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - by the Initial Developer. All Rights Reserved.
+ 
+   - Contributor(s): Jaap Haitsma <jaap@haitsma.org>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!ENTITY reloadevery_menu.label             "Reload Every">
+<!ENTITY reloadevery_menu.accesskey         "E">
+
+<!ENTITY reloadevery_enable.label           "啟動">
+<!ENTITY reloadevery_enable_all_tabs.label  "作用於所有標籤頁">
+<!ENTITY reloadevery_disable_all_tabs.label "禁用於所有標籤頁">
+<!ENTITY reloadevery_randomize.label        "随机">
+
+
+<!ENTITY reloadevery_5s.label               "每  5 秒更新一次">
+<!ENTITY reloadevery_10s.label              "每 10 秒更新一次">
+<!ENTITY reloadevery_30s.label              "每 30 秒更新一次">
+<!ENTITY reloadevery_1m.label               "每  1 分鐘更新一次">
+<!ENTITY reloadevery_5m.label               "每  5 分鐘更新一次">
+<!ENTITY reloadevery_15m.label              "每 15 分鐘更新一次">
+<!ENTITY reloadevery_custom.label           "使用者定義">
+
+<!ENTITY warn_postdata.title                "警告！！！！">
+<!ENTITY warn_postdata.line1                "這個頁面將會對外傳送資料（POSTDATA）。">
+<!ENTITY warn_postdata.line2                "如果你啟動自動更新，這個頁面的任何資料">
+<!ENTITY warn_postdata.line3                "（例如購物網站的購物確認動作等）將會被重新傳送！！！">
+<!ENTITY warn_postdata.line4                "">
+<!ENTITY warn_postdata.line5                "你確定要啟動自動更新嗎？">
+
+<!ENTITY reloadevery.yes                    "是">
+<!ENTITY reloadevery.no                     "否">
+
+<!ENTITY custom_dialog.title                "指定自動更新時間">
+<!ENTITY custom_dialog.groupbox.label       "自動更新時間">
+
+<!ENTITY custom_dialog.minutes.label        "分鐘">
+<!ENTITY custom_dialog.seconds.label        "秒">
+
+
+
+
+

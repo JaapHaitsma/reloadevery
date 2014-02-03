@@ -1,0 +1,16 @@
+#!/bin/sh
+#$Id: mkxpi,v 1.6 2006/02/20 21:44:07 jaap Exp $
+APP_NAME=reloadevery
+rm ${APP_NAME}.xpi
+find content -name "*.xul" -print | zip ${APP_NAME}.jar -@
+find content -name "*.js" -print | zip ${APP_NAME}.jar -@
+find locale -name "*.dtd" -print | zip ${APP_NAME}.jar -@
+find skin -name "*.png" -print | zip ${APP_NAME}.jar -@
+find defaults -name "*.js" -print | zip ${APP_NAME}.jar -@
+
+mkdir chrome
+mv ${APP_NAME}.jar chrome
+
+zip ${APP_NAME}.xpi chrome/${APP_NAME}.jar chrome.manifest install.rdf
+rm -rf chrome
+

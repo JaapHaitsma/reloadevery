@@ -1,0 +1,73 @@
+<!-- $Id: reloadevery.dtd,v 1.2 2009/12/09 06:52:03 jaap Exp $ -->
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   -
+   - The Initial Developer of the Original Code is Jaap Haitsma.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - by the Initial Developer. All Rights Reserved.
+ 
+   - Contributor(s): Jaap Haitsma <jaap@haitsma.org>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!ENTITY reloadevery_menu.label             "Znova načítať každých">
+<!ENTITY reloadevery_menu.accesskey         "Z">
+
+<!ENTITY reloadevery_enable.label           "Zapnúť">
+<!ENTITY reloadevery_enable_all_tabs.label  "Zapnúť všetky karty">
+<!ENTITY reloadevery_disable_all_tabs.label "Vypnúť všetky karty">
+<!ENTITY reloadevery_randomize.label        "Náhodné">
+
+
+<!ENTITY reloadevery_5s.label               "Znova načítať každých 5 sek.">
+<!ENTITY reloadevery_10s.label              "Znova načítať každých 10 sek.">
+<!ENTITY reloadevery_30s.label              "Znova načítať každých 30 sek.">
+<!ENTITY reloadevery_1m.label               "Znova načítať každú 1 min.">
+<!ENTITY reloadevery_5m.label               "Znova načítať každých 5 min.">
+<!ENTITY reloadevery_15m.label              "Znova načítať každých 15 min.">
+<!ENTITY reloadevery_custom.label           "Vlastné">
+
+<!ENTITY warn_postdata.title                "Upozornenie!!!!">
+<!ENTITY warn_postdata.line1                "Stránka, na ktorej sa pokúšate zapnúť ReloadEvery, obsahuje POSTDATA.">
+<!ENTITY warn_postdata.line2                "Ak zapnete ReloadEvery, každá vykonaná akcia formulára">
+<!ENTITY warn_postdata.line3                "(napríklad to môže byť online kúpa) sa bude opakovať!!!">
+<!ENTITY warn_postdata.line4                "">
+<!ENTITY warn_postdata.line5                "Naozaj chcete zapnúť Reload Every?">
+
+<!ENTITY reloadevery.yes                    "Áno">
+<!ENTITY reloadevery.no                     "Nie">
+
+<!ENTITY custom_dialog.title                "Zadajte čas znova načítania">
+<!ENTITY custom_dialog.groupbox.label       "Čas znova načítania">
+
+<!ENTITY custom_dialog.minutes.label        "Minúty">
+<!ENTITY custom_dialog.seconds.label        "Sekundy">
+
+
+
+
+

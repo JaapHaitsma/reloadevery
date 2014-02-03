@@ -1,0 +1,68 @@
+<!-- $Id: reloadevery.dtd,v 1.2 2009/12/09 06:52:02 jaap Exp $ -->
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   -
+   - The Initial Developer of the Original Code is Jaap Haitsma.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - by the Initial Developer. All Rights Reserved.
+ 
+   - Contributor(s): Eduardo Luis Pinheiro Silva <elpsilva@yahoo.com.br>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!ENTITY reloadevery_menu.label             "Atualizar em">
+<!ENTITY reloadevery_menu.accesskey         "A">
+
+<!ENTITY reloadevery_enable.label           "Habilitado">
+<!ENTITY reloadevery_enable_all_tabs.label  "Habilitar em todas as palhetas">
+<!ENTITY reloadevery_disable_all_tabs.label "Desabilitar em todas as palhetas">
+<!ENTITY reloadevery_randomize.label        "Aleatório">
+
+<!ENTITY reloadevery_5s.label               "Atualizar em 5s">
+<!ENTITY reloadevery_10s.label              "Atualizar em 10s">
+<!ENTITY reloadevery_30s.label              "Atualizar em 30s">
+<!ENTITY reloadevery_1m.label               "Atualizar em 1m">
+<!ENTITY reloadevery_5m.label               "Atualizar em 5m">
+<!ENTITY reloadevery_15m.label              "Atualizar em 15m">
+<!ENTITY reloadevery_custom.label           "Customizado">
+
+<!ENTITY warn_postdata.title                "Cuidado!!!!">
+<!ENTITY warn_postdata.line1                "A página em que você está tentando habilitar o ReloadEvery contêm envio de dados.">
+<!ENTITY warn_postdata.line2                "Se você o habilitar qualquer ação realizada pela página">
+<!ENTITY warn_postdata.line3                "(como por exemplo uma compra on-line) será repedita!!!">
+<!ENTITY warn_postdata.line4                "">
+<!ENTITY warn_postdata.line5                "Tem certeza que deseja habilitar o Atualizar em?">
+
+<!ENTITY reloadevery.yes                    "Sim">
+<!ENTITY reloadevery.no                     "Não">
+
+<!ENTITY custom_dialog.title                "Configurar tempo de atualização">
+<!ENTITY custom_dialog.groupbox.label       "Tempo de atualização">
+
+<!ENTITY custom_dialog.minutes.label        "Minutos">
+<!ENTITY custom_dialog.seconds.label        "Segundos">
+
