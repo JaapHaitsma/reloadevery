@@ -33,8 +33,7 @@
     <em:creator>Jaap Haitsma</em:creator>
     <em:homepageURL>http://reloadevery.mozdev.org/</em:homepageURL>
 
-    <!-- Front End Integration Hooks (used by Extension Manager)-->
-    <em:optionsURL>chrome://reloadEvery/content/reloadeveryPrefDialog.xul</em:optionsURL>    
+    <!-- Front End Integration Hooks (used by Extension Manager)-->  
 
     <em:iconURL>chrome://reloadevery/skin/reloadevery.png</em:iconURL>
 

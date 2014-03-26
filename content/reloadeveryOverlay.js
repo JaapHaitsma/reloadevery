@@ -38,7 +38,7 @@ if(!org.mozdev) org.mozdev={};
 if(!org.mozdev.reloadevery) org.mozdev.reloadevery={};
 
 org.mozdev.reloadevery = {
-    DEBUG: true,
+    DEBUG: false,
 
     APP_NAME: "ReloadEvery",
     VERSION: "26.0.0",
@@ -436,23 +436,6 @@ org.mozdev.reloadevery = {
             this.getCurTab().postDataAcceptedByUser = false;
             clearInterval(this.getCurTab().reloadEveryTimerID);
         }
-    },
-
-    loadSettings: function(){
-        this.debug("loadSettings()");
-        // We need to set the prefs and string bundle again, because we get another instance of the object in the pref dialog :-(
-        this.prefs = Components.classes["@mozilla.org/preferences-service;1"].
-                                getService(Components.interfaces.nsIPrefService).getBranch("reloadevery.");
-        document.getElementById("enable-at-startup").setAttribute("checked", "false");
-
-    },
-    saveSettings: function(){    
-        this.debug("saveSettings()");
-
-        var checked;
-        checked = document.getElementById("enable-at-startup").getAttribute("checked");
-        this.debug(checked);
-        return true;
     },
 
     progressListener: function (tab){
