@@ -38,10 +38,10 @@ if(!org.mozdev) org.mozdev={};
 if(!org.mozdev.reloadevery) org.mozdev.reloadevery={};
 
 org.mozdev.reloadevery = {
-    DEBUG: false,
+    DEBUG: true,
 
     APP_NAME: "ReloadEvery",
-    VERSION: "17.0.0",
+    VERSION: "26.0.0",
 
     DEFAULT_RELOAD_TIME: 10,
     DEFAULT_RELOAD_NEW_TABS: false,
@@ -52,31 +52,30 @@ org.mozdev.reloadevery = {
     dialogAccepted: false,
 
     dumpObject: function(obj) {
-        for(i in obj){         
+        for(var i in obj){         
             this.debug(i + " = " + obj[i] + "\n");
         }
 
     },
 
     debug: function(str) {
+        var console = Components.utils.import("resource://gre/modules/devtools/Console.jsm", {}).console;
+        console.log(this.APP_NAME + ": " + str);
         if (!this.DEBUG) {
             return;
         }
-        consoleService = Components.classes["@mozilla.org/consoleservice;1"]
-            .getService(Components.interfaces.nsIConsoleService);
-        consoleService.logStringMessage(this.APP_NAME + ": " + str);
+    
     },
 
     tabAdded: function(event) {
-        new_tab = gBrowser.getBrowserForTab(event.target);
-        if (new_tab.reloadEveryEnabled == null) {
+        var newTab = gBrowser.getBrowserForTab(event.target);
+        if (newTab.reloadEveryEnabled == null) {
             this.debug("tabAdded() new tab"); 
-            this.setupTab(new_tab); 
+            this.setupTab(newTab); 
         }
     },
 
     init: function (){
-
         this.prefs = Components.classes["@mozilla.org/preferences-service;1"].
                         getService(Components.interfaces.nsIPrefService).getBranch("reloadevery.");
 
@@ -234,9 +233,9 @@ org.mozdev.reloadevery = {
     
     contextPopup: function() {
         this.debug("popup()");
-        cm = gContextMenu;
+        var cm = gContextMenu;
         // hide the Reload Every item when apropriate (use same logic as for Back, Stop etc.)
-        hidden = cm.isTextSelected || cm.onLink || cm.onImage || cm.onTextInput;
+        var hidden = cm.isTextSelected || cm.onLink || cm.onImage || cm.onTextInput;
         document.getElementById("reloadevery_menu").hidden = hidden;
         if (!hidden) {
             this.showPopupMenu("reloadevery");
@@ -251,7 +250,7 @@ org.mozdev.reloadevery = {
     // Reloads the page of the tab with the specified reloadEveryTabID 
     reloadPage: function (reloadEveryTabID){
         this.debug("reloadPage(...) : " + reloadEveryTabID);
-        tab = document.getElementById(reloadEveryTabID); 
+        var tab = document.getElementById(reloadEveryTabID); 
 
         if (tab == null){
             this.debug("reloadPage(...) : ReloadEvery disabled");
@@ -265,10 +264,10 @@ org.mozdev.reloadevery = {
         }
 
         this.debug("reloadPage(...) : " + reloadEveryTabID + "reloading url :" + tab.webNavigation.currentURI.spec);
-        loadFlags = nsIWebNavigation.LOAD_FLAGS_BYPASS_HISTORY | nsIWebNavigation.LOAD_FLAGS_BYPASS_PROXY | nsIWebNavigation.LOAD_FLAGS_BYPASS_CACHE;
-        entry=tab.webNavigation.sessionHistory.getEntryAtIndex(tab.webNavigation.sessionHistory.index, false);
-        postData = entry.QueryInterface(Components.interfaces.nsISHEntry).postData;
-        referrer = entry.QueryInterface(Components.interfaces.nsISHEntry).referrerURI;
+        var loadFlags = nsIWebNavigation.LOAD_FLAGS_BYPASS_HISTORY | nsIWebNavigation.LOAD_FLAGS_BYPASS_PROXY | nsIWebNavigation.LOAD_FLAGS_BYPASS_CACHE;
+        var entry=tab.webNavigation.sessionHistory.getEntryAtIndex(tab.webNavigation.sessionHistory.index, false);
+        var postData = entry.QueryInterface(Components.interfaces.nsISHEntry).postData;
+        var referrer = entry.QueryInterface(Components.interfaces.nsISHEntry).referrerURI;
     
         if ((postData != null) && (tab.postDataAcceptedByUser == false)) {
             var params = {result: null}; ;
@@ -288,7 +287,7 @@ org.mozdev.reloadevery = {
         tab.curScrollY = tab.contentWindow.scrollY;
         this.debug("Current scroll position " + tab.curScrollX + ", "+ tab.curScrollY);
 
-        notifyFlags = Components.interfaces.nsIWebProgress.NOTIFY_ALL;
+        var notifyFlags = Components.interfaces.nsIWebProgress.NOTIFY_ALL;
         tab.webProgress.addProgressListener(tab.reloadEveryProgressListener, notifyFlags);         
         tab.webNavigation.loadURI(tab.webNavigation.currentURI.spec, loadFlags, referrer, entry.postData, null);                                              
     },
@@ -296,7 +295,7 @@ org.mozdev.reloadevery = {
     reloadEvery: function(tab) {
         this.debug("reloadEvery");
 
-        milliSeconds = tab.reloadEveryReloadTime*1000;
+        var milliSeconds = tab.reloadEveryReloadTime*1000;
         if (tab.randomize) {
             milliSeconds = (Math.random() + 0.5) * milliSeconds;
         }
@@ -321,7 +320,7 @@ org.mozdev.reloadevery = {
 
     toggle: function() { 
         this.debug("toggle()");
-        tab = this.getCurTab();
+        var tab = this.getCurTab();
         if (tab.reloadEveryEnabled) {
             this.disable(tab);
         }
@@ -332,7 +331,7 @@ org.mozdev.reloadevery = {
 
     randomize: function() { 
         this.debug("randomize()");
-        tab = this.getCurTab();
+        var tab = this.getCurTab();
         if (tab.randomize) {
             tab.randomize = false;
         }
@@ -369,7 +368,7 @@ org.mozdev.reloadevery = {
         this.prefs = Components.classes["@mozilla.org/preferences-service;1"].
                         getService(Components.interfaces.nsIPrefService).getBranch("reloadevery.");
 
-        customReloadTime = this.prefs.getIntPref("custom_reload_time");
+        var customReloadTime = this.prefs.getIntPref("custom_reload_time");
         document.getElementById("reload_every_minutes").value = Math.floor(customReloadTime / 60);
         document.getElementById("reload_every_seconds").value = customReloadTime % 60;
     },
@@ -377,13 +376,15 @@ org.mozdev.reloadevery = {
     customDialogSaveSettings: function() {
         this.debug("reloadeveryCustomDialogSaveSettings()");
  
+        var minutes;
+
         if (document.getElementById("reload_every_minutes").value != '') {
             minutes = parseInt(document.getElementById("reload_every_minutes").value);
         }
         else {
             minutes = 0;
         }
-
+        var seconds;
         if (document.getElementById("reload_every_seconds").value != '') {
             seconds = parseInt(document.getElementById("reload_every_seconds").value);
         }
@@ -391,7 +392,7 @@ org.mozdev.reloadevery = {
           seconds = 0;
         }
 
-        customReloadTime = minutes*60 + seconds;
+        var customReloadTime = minutes*60 + seconds;
         this.prefs.setIntPref("custom_reload_time", customReloadTime);
         this.prefs.setIntPref("reload_time", customReloadTime);
     
@@ -402,7 +403,7 @@ org.mozdev.reloadevery = {
         this.debug("onReloadEveryEnableAllTabs() Number of tabs :" + getBrowser().browsers.length);
 
         for (i = 0; i < getBrowser().browsers.length; i++) {
-           tab = getBrowser().browsers[i];
+           var tab = getBrowser().browsers[i];
             
            if (tab.reloadEveryEnabled == null){
                 this.setupTab(tab);
@@ -419,7 +420,7 @@ org.mozdev.reloadevery = {
         this.debug("disableAllTabs()");
 
         for (i = 0; i < getBrowser().browsers.length; i++) {
-            tab = getBrowser().browsers[i];
+            var tab = getBrowser().browsers[i];
        
             if (tab.reloadEveryEnabled == true) {
                 this.disable(tab);
@@ -435,6 +436,23 @@ org.mozdev.reloadevery = {
             this.getCurTab().postDataAcceptedByUser = false;
             clearInterval(this.getCurTab().reloadEveryTimerID);
         }
+    },
+
+    loadSettings: function(){
+        this.debug("loadSettings()");
+        // We need to set the prefs and string bundle again, because we get another instance of the object in the pref dialog :-(
+        this.prefs = Components.classes["@mozilla.org/preferences-service;1"].
+                                getService(Components.interfaces.nsIPrefService).getBranch("reloadevery.");
+        document.getElementById("enable-at-startup").setAttribute("checked", "false");
+
+    },
+    saveSettings: function(){    
+        this.debug("saveSettings()");
+
+        var checked;
+        checked = document.getElementById("enable-at-startup").getAttribute("checked");
+        this.debug(checked);
+        return true;
     },
 
     progressListener: function (tab){
@@ -482,6 +500,8 @@ org.mozdev.reloadevery = {
         });     
     }
 } // end org.mozdev.reloadevery
+
+
 
 // Every time a new browser window is made init will be called
 window.addEventListener("load",function() {org.mozdev.reloadevery.init()},false);

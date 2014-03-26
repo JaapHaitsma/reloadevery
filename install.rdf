@@ -14,7 +14,7 @@
      <Description>
        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
        <em:minVersion>3.6</em:minVersion>
-       <em:maxVersion>17.*</em:maxVersion>
+       <em:maxVersion>26.*</em:maxVersion>
      </Description>
     </em:targetApplication>
 
@@ -34,6 +34,8 @@
     <em:homepageURL>http://reloadevery.mozdev.org/</em:homepageURL>
 
     <!-- Front End Integration Hooks (used by Extension Manager)-->
+    <em:optionsURL>chrome://reloadEvery/content/reloadeveryPrefDialog.xul</em:optionsURL>    
+
     <em:iconURL>chrome://reloadevery/skin/reloadevery.png</em:iconURL>
 
   </Description>      
