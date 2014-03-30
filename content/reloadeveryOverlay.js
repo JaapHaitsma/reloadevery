@@ -41,7 +41,7 @@ org.mozdev.reloadevery = {
     DEBUG: false,
 
     APP_NAME: "ReloadEvery",
-    VERSION: "26.0.0",
+    VERSION: "28.0.0",
 
     DEFAULT_RELOAD_TIME: 10,
     DEFAULT_RELOAD_NEW_TABS: false,
@@ -121,7 +121,7 @@ org.mozdev.reloadevery = {
     
         if (!this.prefs.prefHasUserValue("version")) {
             this.debug("init(): no version found");
-            setTimeout(function() { window.openUILinkIn("http://reloadevery.mozdev.org/thanks.html", "tab"); }, 500);
+            setTimeout(function() { window.openUILinkIn("http://reloadevery.mozdev.org/thanks-install.html", "tab"); }, 500);
             this.prefs.setCharPref("version", this.VERSION);
         }
         if (this.prefs.getCharPref("version") != this.VERSION) {
@@ -179,21 +179,10 @@ org.mozdev.reloadevery = {
             this.setupTab(this.getCurTab());    
         }
 
-        if (this.getCurTab().reloadEveryEnabled){
-            document.getElementById(prefix + "_enable").setAttribute("checked", "true");
-        }
-        else {
-            document.getElementById(prefix + "_enable").setAttribute("checked", "false");
-        }
+        document.getElementById(prefix + "_enable").setAttribute("checked", this.getCurTab().reloadEveryEnabled ? "true" : "false");
+        document.getElementById(prefix + "_randomize").setAttribute("checked", this.getCurTab().randomize ? "true" : "false");
+        document.getElementById(prefix + "_auto_new_tabs").setAttribute("checked", this.prefs.getBoolPref("reload_new_tabs") ? "true" : "false");
 
-        if (this.getCurTab().randomize){
-            document.getElementById(prefix + "_randomize").setAttribute("checked", "true");
-        }
-        else {
-            document.getElementById(prefix + "_randomize").setAttribute("checked", "false");
-        }
-
- 
         // First uncheck all radio menuitems
         document.getElementById(prefix + "_5s").setAttribute("checked", "false");
         document.getElementById(prefix + "_10s").setAttribute("checked", "false");
@@ -202,9 +191,7 @@ org.mozdev.reloadevery = {
         document.getElementById(prefix + "_5m").setAttribute("checked", "false");
         document.getElementById(prefix + "_15m").setAttribute("checked", "false");
         document.getElementById(prefix + "_custom").setAttribute("checked", "false");
-
-        // Now select the appropriate one
- 
+        // Now select the appropriate one 
         if (this.getCurTab().reloadEveryReloadTime == 5) {
             document.getElementById(prefix + "_5s").setAttribute("checked", "true");
         }
@@ -428,6 +415,14 @@ org.mozdev.reloadevery = {
         }
     },
 
+    autoNewTabsToggle: function() {
+        this.debug("autoNewTabsToggle");
+        if (this.prefs.getBoolPref("reload_new_tabs")) {
+            this.prefs.setBoolPref("reload_new_tabs", false);
+        } else {
+            this.prefs.setBoolPref("reload_new_tabs", true);
+        }
+    },
 
     onKeyPressInURLBar: function () {
         if (this.getCurTab().reloadEveryEnabled){

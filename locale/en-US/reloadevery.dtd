@@ -1,4 +1,4 @@
-<!-- $Id: reloadevery.dtd,v 1.2 2009/12/05 23:19:17 jaap Exp $ -->
+<!-- $Id: reloadevery.dtd,v 1.3 2014/03/30 00:41:24 jaap Exp $ -->
 
 <!-- ***** BEGIN LICENSE BLOCK *****
    - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -41,6 +41,8 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Enable All Tabs">
 <!ENTITY reloadevery_disable_all_tabs.label "Disable All Tabs">
 <!ENTITY reloadevery_randomize.label        "Randomize">
+
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 <!ENTITY reloadevery_5s.label               "Reload Every 5s">
 <!ENTITY reloadevery_10s.label              "Reload Every 10s">

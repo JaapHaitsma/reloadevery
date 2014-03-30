@@ -58,6 +58,7 @@
       <menuseparator /> 
       <menuitem id="reloadevery_enable_all_tabs" label="&reloadevery_enable_all_tabs.label;" oncommand="org.mozdev.reloadevery.enableAllTabs()"/>
       <menuitem id="reloadevery_disable_all_tabs" label="&reloadevery_disable_all_tabs.label;" oncommand="org.mozdev.reloadevery.disableAllTabs()"/>
+      <menuitem id="reloadevery_auto_new_tabs" label="&reloadevery_auto_new_tabs.label;" type="checkbox" oncommand="org.mozdev.reloadevery.autoNewTabsToggle()"/>
     </menupopup>
   </menu>
 </popup>
@@ -80,6 +81,7 @@
       <menuseparator /> 
       <menuitem id="tab_reloadevery_enable_all_tabs" label="&reloadevery_enable_all_tabs.label;" oncommand="org.mozdev.reloadevery.enableAllTabs()"/>
       <menuitem id="tab_reloadevery_disable_all_tabs" label="&reloadevery_disable_all_tabs.label;" oncommand="org.mozdev.reloadevery.disableAllTabs()"/>
+      <menuitem id="tab_reloadevery_auto_new_tabs" label="&reloadevery_auto_new_tabs.label;" type="checkbox" oncommand="org.mozdev.reloadevery.autoNewTabsToggle()"/>      
     </menupopup>
   </menu>
 </popup>
