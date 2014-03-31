@@ -41,6 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Inschaken voor alle tabbladen">
 <!ENTITY reloadevery_disable_all_tabs.label "Uitschakelen voor alle tabbladen">
 <!ENTITY reloadevery_randomize.label        "Random">
+<!ENTITY reloadevery_auto_new_tabs.label    "Automatisch inschakelen nieuwe tabbladen">
 
 <!ENTITY reloadevery_5s.label           	"Herlaad iedere 5s">
 <!ENTITY reloadevery_10s.label          	"Herlaad iedere 10s">

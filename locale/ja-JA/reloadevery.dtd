@@ -41,7 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "全てのタブで有効にする">
 <!ENTITY reloadevery_disable_all_tabs.label "全てのタブで無効にする">
 <!ENTITY reloadevery_randomize.label        "ランダム">
-
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 <!ENTITY reloadevery_5s.label               "5秒間毎に自動更新">
 <!ENTITY reloadevery_10s.label              "10秒間毎に自動更新">

@@ -41,6 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Povolit u všech panelů">
 <!ENTITY reloadevery_disable_all_tabs.label "Zakázat u všech panelů">
 <!ENTITY reloadevery_randomize.label        "Náhodné">
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 
 <!ENTITY reloadevery_5s.label               "Obnovit každých 5s">

@@ -41,6 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Activer tous les onglets">
 <!ENTITY reloadevery_disable_all_tabs.label "Désactiver tous les onglets">
 <!ENTITY reloadevery_randomize.label        "Aléatoire">
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Activer les onglets nouveaux">
 
 <!ENTITY reloadevery_5s.label               "Toutes les 5sec">
 <!ENTITY reloadevery_10s.label              "Toutes les 10sec">

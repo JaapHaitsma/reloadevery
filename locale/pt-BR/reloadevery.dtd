@@ -41,6 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Habilitar em todas as palhetas">
 <!ENTITY reloadevery_disable_all_tabs.label "Desabilitar em todas as palhetas">
 <!ENTITY reloadevery_randomize.label        "Aleatório">
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 <!ENTITY reloadevery_5s.label               "Atualizar em 5s">
 <!ENTITY reloadevery_10s.label              "Atualizar em 10s">

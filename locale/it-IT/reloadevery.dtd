@@ -5,6 +5,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Attiva su tutte le schede">
 <!ENTITY reloadevery_disable_all_tabs.label "Disattiva su tutte le schede">
 <!ENTITY reloadevery_randomize.label        "Random">
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto attiva schede nuovo">
 
 <!ENTITY reloadevery_5s.label               "Aggiorna ogni  5 sec.">
 <!ENTITY reloadevery_10s.label              "Aggiorna ogni 10 sec.">

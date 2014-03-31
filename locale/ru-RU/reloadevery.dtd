@@ -43,6 +43,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Включить во всех закладках">
 <!ENTITY reloadevery_disable_all_tabs.label "Запретить во всех закладках">
 <!ENTITY reloadevery_randomize.label        "Cлучайный">
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 <!ENTITY reloadevery_5s.label               "Обновлять каждые 5с">
 <!ENTITY reloadevery_10s.label              "Обновлять каждые 10с">

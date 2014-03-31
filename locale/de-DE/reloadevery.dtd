@@ -41,6 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "Für alle Tabs aktivieren">
 <!ENTITY reloadevery_disable_all_tabs.label "Für alle Tabs deaktivieren">
 <!ENTITY reloadevery_randomize.label        "Zufällig">
+<!ENTITY reloadevery_auto_new_tabs.label    "Alle neuen Tabs aktivieren">
 
 <!ENTITY reloadevery_5s.label               "Alle 5s neu laden">
 <!ENTITY reloadevery_10s.label              "Alle 10s neu laden">
@@ -51,7 +52,7 @@
 <!ENTITY reloadevery_custom.label           "Benutzerdefinierte Zeit">
 
 <!ENTITY warn_postdata.title                "Warnung!">
-<!ENTITY warn_postdata.line1                "DIe Seite, auf der Sie Reload Every aktivieren wollen, enthält POST-Daten.">
+<!ENTITY warn_postdata.line1                "Die Seite, auf der Sie Reload Every aktivieren wollen, enthält POST-Daten.">
 <!ENTITY warn_postdata.line2                "Falls Sie Reload Every aktivieren, wird jede Aktion, die Sie durchgeführt haben">
 <!ENTITY warn_postdata.line3                "(z.B. Online-Einkäufe), wiederholt!">
 <!ENTITY warn_postdata.line4                "">

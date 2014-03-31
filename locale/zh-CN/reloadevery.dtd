@@ -41,7 +41,7 @@
 <!ENTITY reloadevery_enable_all_tabs.label  "作用于所有标签页">
 <!ENTITY reloadevery_disable_all_tabs.label "禁用于所有标签页">
 <!ENTITY reloadevery_randomize.label        "随机">
-
+<!ENTITY reloadevery_auto_new_tabs.label    "Auto Enable New Tab">
 
 <!ENTITY reloadevery_5s.label               "每 5 秒刷新一次">
 <!ENTITY reloadevery_10s.label              "每 10 秒刷新一次">
