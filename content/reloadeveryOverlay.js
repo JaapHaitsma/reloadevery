@@ -41,7 +41,7 @@ org.mozdev.reloadevery = {
     DEBUG: false,
 
     APP_NAME: "ReloadEvery",
-    VERSION: "28.0.0",
+    VERSION: "28.0.1",
 
     DEFAULT_RELOAD_TIME: 10,
     DEFAULT_RELOAD_NEW_TABS: false,
@@ -59,11 +59,11 @@ org.mozdev.reloadevery = {
     },
 
     debug: function(str) {
-        var console = Components.utils.import("resource://gre/modules/devtools/Console.jsm", {}).console;
-        console.log(this.APP_NAME + ": " + str);
         if (!this.DEBUG) {
             return;
         }
+        var console = Components.utils.import("resource://gre/modules/devtools/Console.jsm", {}).console;
+        console.log(this.APP_NAME + ": " + str);
     
     },
 
