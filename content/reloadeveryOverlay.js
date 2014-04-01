@@ -41,7 +41,7 @@ org.mozdev.reloadevery = {
     DEBUG: false,
 
     APP_NAME: "ReloadEvery",
-    VERSION: "28.0.1",
+    VERSION: "28.0.2",
 
     DEFAULT_RELOAD_TIME: 10,
     DEFAULT_RELOAD_NEW_TABS: false,
