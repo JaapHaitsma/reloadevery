@@ -1,21 +1,21 @@
 overlay	chrome://browser/content/browser.xul	chrome://reloadevery/content/reloadeveryOverlay.xul
 overlay	chrome://navigator/content/navigator.xul	chrome://reloadevery/content/reloadeveryOverlay.xul
 
-content reloadevery jar:chrome/reloadevery.jar!/content/
+content reloadevery content/
 
-locale reloadevery en-US jar:chrome/reloadevery.jar!/locale/en-US/
-locale reloadevery es-ES jar:chrome/reloadevery.jar!/locale/es-ES/
-locale reloadevery fr-FR jar:chrome/reloadevery.jar!/locale/fr-FR/
-locale reloadevery de-DE jar:chrome/reloadevery.jar!/locale/de-DE/
-locale reloadevery it-IT jar:chrome/reloadevery.jar!/locale/it-IT/
-locale reloadevery nl-NL jar:chrome/reloadevery.jar!/locale/nl-NL/
-locale reloadevery cs-CZ jar:chrome/reloadevery.jar!/locale/cs-CZ/
-locale reloadevery pt-BR jar:chrome/reloadevery.jar!/locale/pt-BR/
-locale reloadevery zh-CN jar:chrome/reloadevery.jar!/locale/zh-CN/
-locale reloadevery zh-TW jar:chrome/reloadevery.jar!/locale/zh-TW/
-locale reloadevery ja-JA jar:chrome/reloadevery.jar!/locale/ja-JA/
-locale reloadevery ru-RU jar:chrome/reloadevery.jar!/locale/ru-RU/
-locale reloadevery sk-SK jar:chrome/reloadevery.jar!/locale/sk-SK/
-locale reloadevery pl-PL jar:chrome/reloadevery.jar!/locale/pl-PL/
-skin reloadevery classic/1.0 jar:chrome/reloadevery.jar!/skin/classic/
+locale reloadevery en-US locale/en-US/
+locale reloadevery es-ES locale/es-ES/
+locale reloadevery fr-FR locale/fr-FR/
+locale reloadevery de-DE locale/de-DE/
+locale reloadevery it-IT locale/it-IT/
+locale reloadevery nl-NL locale/nl-NL/
+locale reloadevery cs-CZ locale/cs-CZ/
+locale reloadevery pt-BR locale/pt-BR/
+locale reloadevery zh-CN locale/zh-CN/
+locale reloadevery zh-TW locale/zh-TW/
+locale reloadevery ja-JA locale/ja-JA/
+locale reloadevery ru-RU locale/ru-RU/
+locale reloadevery sk-SK locale/sk-SK/
+locale reloadevery pl-PL locale/pl-PL/
+skin reloadevery classic/1.0 skin/classic/
 
