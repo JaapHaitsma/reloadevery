@@ -41,7 +41,7 @@ org.mozdev.reloadevery = {
     DEBUG: false,
 
     APP_NAME: "ReloadEvery",
-    VERSION: "28.0.2",
+    VERSION: "45.0.0",
 
     DEFAULT_RELOAD_TIME: 10,
     DEFAULT_RELOAD_NEW_TABS: false,
@@ -62,7 +62,6 @@ org.mozdev.reloadevery = {
         if (!this.DEBUG) {
             return;
         }
-        var console = Components.utils.import("resource://gre/modules/devtools/Console.jsm", {}).console;
         console.log(this.APP_NAME + ": " + str);
     
     },
@@ -250,8 +249,9 @@ org.mozdev.reloadevery = {
             return;
         }
 
-        this.debug("reloadPage(...) : " + reloadEveryTabID + "reloading url :" + tab.webNavigation.currentURI.spec);
-        var loadFlags = nsIWebNavigation.LOAD_FLAGS_BYPASS_HISTORY | nsIWebNavigation.LOAD_FLAGS_BYPASS_PROXY | nsIWebNavigation.LOAD_FLAGS_BYPASS_CACHE;
+        var loadFlags = tab.webNavigation.LOAD_FLAGS_BYPASS_HISTORY | tab.webNavigation.LOAD_FLAGS_BYPASS_PROXY | tab.webNavigation.LOAD_FLAGS_BYPASS_CACHE;
+        this.debug("reloadPage(...) : " + reloadEveryTabID + "reloading url :" + tab.webNavigation.currentURI.spec + " loadFlags: " + loadFlags);
+
         var entry=tab.webNavigation.sessionHistory.getEntryAtIndex(tab.webNavigation.sessionHistory.index, false);
         var postData = entry.QueryInterface(Components.interfaces.nsISHEntry).postData;
         var referrer = entry.QueryInterface(Components.interfaces.nsISHEntry).referrerURI;
@@ -482,5 +482,5 @@ org.mozdev.reloadevery = {
 
 
 // Every time a new browser window is made init will be called
-window.addEventListener("load",function() {org.mozdev.reloadevery.init()},false);
+window.addEventListener("load",function() {org.mozdev.reloadevery.init()}, false);
 
